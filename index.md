@@ -1,3 +1,11 @@
+---
+title: Home
+layout: home
+nav_order: 1
+description: "GQL"
+permalink: /
+---
+
 # Getting started
 
 Welcome to the Consonance GraphQL API.
