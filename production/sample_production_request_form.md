@@ -1,3 +1,11 @@
+---
+title: Sample production request form
+layout: home
+nav_order: 1
+parent: Production
+permalink: sample_production_request_form
+---
+
 # Sample production request form
 
 Generate a production request form for a particular product using Google Docs
@@ -26,13 +34,13 @@ Using a combination of GraphQL and Javascript in Google Docs and Apps Script you
             font-style: normal;
             font-size: 13px;
         }
-        .light { 
+        .light {
             font-weight: 300;
         }
-        .regular { 
+        .regular {
             font-weight: 400;
         }
-        .semibold { 
+        .semibold {
             font-weight: 600;
         }
     </style>
@@ -132,7 +140,7 @@ function queryResponse(isbn, key, url) {
           contributorPrettyList
           editionNumber
           imprint {
-          id 
+          id
           name
           }
 productionRuns {
@@ -224,7 +232,7 @@ productionRuns {
         }
       }
     }
-  ` 
+  `
   const payload = JSON.stringify({query: queryString})
   const response = UrlFetchApp.fetch(`${url}/graphql`, {
     method: "POST",

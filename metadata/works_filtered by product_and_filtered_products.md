@@ -1,3 +1,11 @@
+---
+title: Works filtered by product and filtered products
+layout: home
+nav_order: 5
+parent: Metadata
+permalink: works_filtered_by_product_and_filtered_products
+---
+
 # Description
 
 Select works that have any products published after 2000-01-01, and their products that were published after 2000-01-01

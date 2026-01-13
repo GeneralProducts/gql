@@ -1,3 +1,11 @@
+---
+title: Select works and their product production run details
+layout: home
+nav_order: 2
+parent: Production
+permalink: works_and_product_production_run_details
+---
+
 # Select works and their product production run details
 
 Select works and production run information for their products

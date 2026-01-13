@@ -1,3 +1,11 @@
+---
+title: Select works and their relevant marketing material
+layout: home
+nav_order: 2
+parent: Metadata
+permalink: works_and_marketing_material
+---
+
 # Select works and their relevant marketing material
 
 Select works and their marketing material
