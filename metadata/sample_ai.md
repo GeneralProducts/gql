@@ -249,8 +249,8 @@ const main = (form = {isbn13:"YOUR_ISBN", key:"YOUR_API_KEY", url:"https://web.c
 
 Here is an example of how your AI could look before it is populated.
 
-![Google Docs screenshot showing an AI sheet containing templated text.](/images/sampleAI.png)
+![Google Docs screenshot showing an AI sheet containing templated text.](/assets/sampleAI.png)
 
 This is how your AI could look once you have run the script.
 
-[An AI Sheet populated using GraphQL](/images/sampleAI.pdf)
+[An AI Sheet populated using GraphQL](/assets/sampleAI.pdf)
