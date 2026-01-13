@@ -16,10 +16,10 @@ Using a combination of GraphQL and Javascript in Google Docs and Apps Script you
 
 **Setting Up the Sidebar in Google Docs:**
 
-* Open a new Google Docs document.
-* Navigate to `Extensions > Apps Script`.
-* In the Apps Script Editor, click the plus icon (+) next to "Files" and create a new HTML file named 'sidebar'.
-* Copy and paste the HTML code below to create an interactive sidebar, replacing any placeholder text that already exists in the new file. This sidebar, accessible from the main navigation of your document, includes a form for inputting an ISBN, URL, and API key. The sidebar can be customised with CSS.
+- Open a new Google Docs document.
+- Navigate to `Extensions > Apps Script`.
+- In the Apps Script Editor, click the plus icon (+) next to "Files" and create a new HTML file named 'sidebar'.
+- Copy and paste the HTML code below to create an interactive sidebar, replacing any placeholder text that already exists in the new file. This sidebar, accessible from the main navigation of your document, includes a form for inputting an ISBN, URL, and API key. The sidebar can be customised with CSS.
 
 ```
 <!DOCTYPE html>
@@ -78,9 +78,9 @@ Using a combination of GraphQL and Javascript in Google Docs and Apps Script you
 
 **Creating the Main Script:**
 
-* In the Script Editor, select `Code.gs` from the file section. Google might have called it something else, but there will only be one file with the .gs extension, so that's the one to select.
-* Copy and paste the JavaScript code below into this file. This code includes functions for opening the sidebar, sending GraphQL queries, and populating your Google Doc with the fetched data.
-* Optionally, replace placeholders like `YOUR_API_KEY` with actual values provided by Consonance support.
+- In the Script Editor, select `Code.gs` from the file section. Google might have called it something else, but there will only be one file with the .gs extension, so that's the one to select.
+- Copy and paste the JavaScript code below into this file. This code includes functions for opening the sidebar, sending GraphQL queries, and populating your Google Doc with the fetched data.
+- Optionally, replace placeholders like `YOUR_API_KEY` with actual values provided by Consonance support.
 
 ```
 function onOpen() {
@@ -295,7 +295,7 @@ Save the file. The top of the page should look like this, with onOpen selected:&
 
 **Creating a template:**
 
-Type and format words as you'd usually do into the doc (not the script).  The words that can be swapped out using the example we've given here are the ones in red in this screenshot:&#x20;
+Type and format words as you'd usually do into the doc (not the script). The words that can be swapped out using the example we've given here are the ones in red in this screenshot:&#x20;
 
 e.g. type IMPRINTNAME\_ into your doc to have it replaced with the imprint's name.
 
@@ -305,17 +305,17 @@ You can edit the script if you prefer different names, and add other queries.&#x
 
 **Using Your Custom Production Request Form:**
 
-* Back in your Google Docs document, a new menu item "Consonance" will appear in the main navigation bar.
-* Click on it and select the option to open the sidebar.
-* Fill out the form in the sidebar with the required information (URL, API Key, ISBN) and click "Find" to auto-populate the production request form.
+- Back in your Google Docs document, a new menu item "Consonance" will appear in the main navigation bar.
+- Click on it and select the option to open the sidebar.
+- Fill out the form in the sidebar with the required information (URL, API Key, ISBN) and click "Find" to auto-populate the production request form.
 
 Here is an example of how your Google doc might look before the script runs.
 
-![Google Docs screenshot. The document has the heading Consonance Production Request Form and has many fields that are unpopulated.](../images/sampleprodreqformbefore.png)
+![Google Docs screenshot. The document has the heading Consonance Production Request Form and has many fields that are unpopulated.](gql/images/sampleprodreqformbefore.png)
 
 This is how it might look after choosing the 'Find' button.
 
-![Google Docs screenshot. The previously unpopulated fields now have relevant information retrieved from Consonance.](../images/sampleprodreqformafter.png)
+![Google Docs screenshot. The previously unpopulated fields now have relevant information retrieved from Consonance.](gql/images/sampleprodreqformafter.png)
 
 **Troubleshooting**
 
