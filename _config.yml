@@ -3,3 +3,4 @@ description: Consonance GraphQL docs
 theme: just-the-docs
 
 url: https://GeneralProducts.github.io/gql
+color_scheme: dark
