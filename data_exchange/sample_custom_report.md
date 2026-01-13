@@ -1,3 +1,11 @@
+---
+title: Sample custom report sheet
+layout: home
+nav_order: 2
+parent: Data exchange
+permalink: sample_custom_report
+---
+
 # Sample custom report sheet
 
 Generate a report in Google Sheets with customisable columns
@@ -8,13 +16,13 @@ Using a combination of GraphQL and Javascript in Google Sheets and Apps Script y
 
 **Set Up your Report in Google Sheets:**
 
-* Open a new spreadsheet in Google Sheets.
-* Navigate to `Extensions > Apps Script` from the main menu to access the Apps Script editor.
-* In the Apps Script editor, paste the script provided below into a new or existing file, replacing any existing text.
-* Update the script with your API key from Consonance.
-* This script is designed to fetch and display every field available in Consonance's GraphQL schema in your Google Sheet. You can rearrange, rename, or delete fields as needed to tailor the report to your requirements and refer to the inline notes in the script for help doing that
+- Open a new spreadsheet in Google Sheets.
+- Navigate to `Extensions > Apps Script` from the main menu to access the Apps Script editor.
+- In the Apps Script editor, paste the script provided below into a new or existing file, replacing any existing text.
+- Update the script with your API key from Consonance.
+- This script is designed to fetch and display every field available in Consonance's GraphQL schema in your Google Sheet. You can rearrange, rename, or delete fields as needed to tailor the report to your requirements and refer to the inline notes in the script for help doing that
 
-```gql
+```
  // Replace the text YOUR_API_KEY below with the API key provided to you by Consonance support.
 const API_KEY = 'YOUR_API_KEY';
 
@@ -28,7 +36,7 @@ const main = () => {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const sheet = ss.getSheetByName("sheet1");
   sheet.appendRow(getFieldData(FIELD_TYPE.HEADERS));
-  
+
   const dataArray = dataToArray(products);
    ss.getRange("product_data").clearContent();
   ss.setNamedRange("product_data", sheet.getRange(2, 1, dataArray.length, dataArray[0].length));
@@ -248,7 +256,7 @@ contributions {
         }
       }
     }`;
-  
+
   const payload = JSON.stringify({query: queryString});
   const response = UrlFetchApp.fetch("https://web.consonance.app/graphql", {
     method: "POST",
@@ -271,9 +279,9 @@ function productToArray(product) {
   return getFieldData(FIELD_TYPE.PRODUCT_ROWS, product);
 }
 
-// The function below generates both your column headings and the rows with your data. 
+// The function below generates both your column headings and the rows with your data.
 
-// Each row represents a column in your worksheet. The order of this list is the order 
+// Each row represents a column in your worksheet. The order of this list is the order
 // your columns will appear, so you can rearrange them as you please.
 
 // We have kept the column header names here matching the fields in Consonance's
@@ -281,7 +289,7 @@ function productToArray(product) {
 // the text between quotation marks but the names must be unique from one another.
 
 
-// The field names after the column heading must match how they are named in the GraphQL 
+// The field names after the column heading must match how they are named in the GraphQL
 // schema in order for them to retrieve the correct data.
 
 // it may be easier to first delete any columns you do not need before reordering the
@@ -418,7 +426,7 @@ function getFieldData(fieldType, product = null) {
     ["Work Similar Product ONIX Contributor Role Description", product?.work.similarProducts[0]?.contributions[0]?.onixContributorRole?.description],
   ]);
   if (
-    !Object.values(FIELD_TYPE).includes(fieldType) || 
+    !Object.values(FIELD_TYPE).includes(fieldType) ||
     fieldType === FIELD_TYPE.PRODUCT_ROWS && product === null
   ) {
     return [];
@@ -434,10 +442,10 @@ function getFieldData(fieldType, product = null) {
 
 **Running the Script:**
 
-* Back in Google Sheets, select `Run` from the main menu to execute the script.
-* You may be prompted to authorise the script. Sign in to your Google account and grant the necessary permissions to allow the script to interact with your sheet.
-* Once authorised and run, the script will populate your sheet with the specified data fields.
+- Back in Google Sheets, select `Run` from the main menu to execute the script.
+- You may be prompted to authorise the script. Sign in to your Google account and grant the necessary permissions to allow the script to interact with your sheet.
+- Once authorised and run, the script will populate your sheet with the specified data fields.
 
 Here is an example of how your report could look.
 
-![Google Sheets screenshot showing a populated spreadsheet with metadata retrieved from Consonance.](../images/samplecustomreport.png)
+![Google Sheets screenshot showing a populated spreadsheet with metadata retrieved from Consonance.](/gql/images/samplecustomreport.png)

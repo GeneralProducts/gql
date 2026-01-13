@@ -6,7 +6,7 @@ Select works and their products
 
 Works are retrieved along with their products. This is structured so that the products are naturally grouped under their works, so less data needs to be processed.
 
-```gql
+```
 {
   works {
     id

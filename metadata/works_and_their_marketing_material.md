@@ -6,7 +6,7 @@ Select works and their marketing material
 
 Products within a work are listed along with relevant marketing material such as description copy, prizes and subject classifications.
 
-```gql
+```
 query WorkType {
   work(workSearch: {idEq: 91804}) {
     id
@@ -16,7 +16,7 @@ query WorkType {
     subtitle
   authorshipDescription
   contributorPrettyList
-  
+
     contributions {
       id
       productIds
@@ -28,7 +28,7 @@ query WorkType {
       }
     }
   editionNumber
-  
+
   mainBicCode: subjectCodes(schemesIn: [BIC], mainOnly: true) {
       __typename
       code
@@ -52,7 +52,7 @@ query WorkType {
   marketingTexts{
    onixContentAudienceCodes
    onixContentAudiences{description}
-   id 
+   id
    fromDate
    externalTextNumberOfCharacters
    externalText
@@ -93,7 +93,7 @@ query WorkType {
     __typename
     contributor{name}
     onixContributorRole{description}
-    
+
    }
    authorshipDescription
    id
