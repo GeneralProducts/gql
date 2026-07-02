@@ -40,7 +40,7 @@ ONIX is a popular data interchange format between supply chain partners, and may
 
 - https://graphql.org/ for general information about GraphQL
 - Documentation for our [GraphQL schema](http://graphql-schema.consonance.app.s3-website-eu-west-1.amazonaws.com/)
-- [Insomnia](https://insomnia.rest) is our recommended desktop client for developing, testing, and refining your queries. Other tools like [Postman](https://www.postman.com) are popular, but currently Insomnia has the edge because of its strong support for introspection, and ability to show in-tool documentation for the API.
+- [Bruno](https://www.usebruno.com/) is our recommended desktop client for developing, testing, and refining your queries.
 
 ## Running a query
 
